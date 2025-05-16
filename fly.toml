@@ -1,0 +1,50 @@
+# fly.toml app configuration file generated for TechGather-frontend-spring-sound-6636 on 2024-11-02T18:42:28+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'TechGather'
+primary_region = 'fra'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  NODE_ENV = 'production'
+  PORT = '3000'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+  [http_service.concurrency]
+    hard_limit = 50
+    soft_limit = 25
+
+[[services]]
+  protocol = 'tcp'
+  internal_port = 3000
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+
+  [[services.ports]]
+    port = 80
+    handlers = ['http']
+
+  [[services.ports]]
+    port = 443
+    handlers = ['tls', 'http']
+
+[[vm]]
+  memory = '1024'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[[metrics]]
+  port = 3000
+  path = '/metrics'
+  https = false

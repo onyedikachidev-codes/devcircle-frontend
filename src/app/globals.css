@@ -1,0 +1,405 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "CH_Custom_W_Bd";
+  src: url("/fonts/Cereal/AirbnbCerealWBd.woff2") format("woff2"),
+    url("/fonts/Cereal/AirbnbCerealWBd.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CH_Custom_W_Blk";
+  src: url("/fonts/Cereal/AirbnbCerealWBlk.woff2") format("woff2"),
+    url("/fonts/Cereal/AirbnbCerealWBlk.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CH_Custom_W_Bk";
+  src: url("/fonts/Cereal/AirbnbCerealWBk.woff2") format("woff2"),
+    url("/fonts/Cereal/AirbnbCerealWBk.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CH_Custom_W_Lt";
+  src: url("/fonts/Cereal/AirbnbCerealWLt.woff2") format("woff2"),
+    url("/fonts/Cereal/AirbnbCerealWLt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CH_Custom_W_XBd";
+  src: url("/fonts/Cereal/AirbnbCerealWXBd.woff2") format("woff2"),
+    url("/fonts/Cereal/AirbnbCerealWXBd.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CH_Custom_W_Md";
+  src: url("/fonts/Cereal/AirbnbCerealWMd.woff2") format("woff2"),
+    url("/fonts/Cereal/AirbnbCerealWMd.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "CH_Custom_W_Bk", sans-serif;
+  font-weight: 400;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Quill Editor Styles */
+.custom-quill {
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 0.8rem !important;
+}
+
+.custom-quill:hover {
+  border-color: #9ca3af !important;
+}
+
+.custom-quill:active,
+.custom-quill:focus-within {
+  border-color: rgba(0, 38, 255, 0.638) !important;
+  outline: none; /* Remove the default browser outline, if desired */
+}
+
+.custom-quill .ql-container {
+  border: 0px !important;
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+}
+
+.custom-quill .ql-editor {
+  min-height: 300px !important;
+  font-family: "CH_Custom_W_Bk", "sans-serif" !important;
+  font-weight: 100 !important;
+  color: #4b5563 !important;
+  font-size: 15px !important;
+}
+
+.custom-quill .ql-editor.ql-blank::before {
+  color: #9ca3af !important;
+  content: attr(data-placeholder) !important;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 300 !important;
+  position: absolute;
+  font-style: normal;
+}
+
+.custom-quill .ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid #e3e9f0 !important;
+  border-radius: 0;
+}
+
+.custom-quill .ql-toolbar button {
+  background-color: #eceff3 !important;
+  font-weight: 100 !important;
+  margin-right: 4px;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.custom-quill .ql-toolbar button:hover {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.custom-quill .ql-picker-label {
+  background-color: #eceff3;
+  border-radius: 5px;
+  border-color: transparent !important;
+}
+
+.custom-quill .ql-picker-label:active {
+  border: none !important;
+}
+
+.custom-quill .ql-picker-label::before {
+  color: #4b4463 !important;
+  font-weight: 400 !important;
+  font-family: "CH_Custom_W_Bk", "sans-serif" !important;
+  font-size: 0.9rem;
+}
+
+.custom-quill .ql-editor p {
+  margin: 0;
+}
+
+/* Datepicker Base Styles */
+/* Fixes a problem with the datepicker where width is fixed */
+.react-datepicker-wrapper {
+  display: block !important;
+}
+
+/* Hide main feed overflow scrollbar */
+.hide-scroll {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Base Article Styles */
+.article-content {
+  width: 100%;
+  font-family: "CH_Custom_W_Bk", "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  line-height: 1.75;
+  font-size: 1.05rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1.3;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.article-content h1 {
+  font-size: 2.5rem;
+}
+
+.article-content h2 {
+  font-size: 2rem;
+}
+
+.article-content h3 {
+  font-size: 1.75rem;
+}
+
+.article-content h4 {
+  font-size: 1.5rem;
+}
+
+.article-content h5 {
+  font-size: 1.25rem;
+}
+
+.article-content h6 {
+  font-size: 1.125rem;
+}
+
+/* Paragraphs */
+.article-content p {
+  margin: 1rem 0;
+  color: #4a4a4a;
+}
+
+/* Lists */
+.article-content ul,
+.article-content ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.article-content ul li,
+.article-content ol li {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.article-content ul li {
+  list-style: disc;
+}
+
+.article-content ol li {
+  list-style: decimal;
+}
+
+/* Blockquote */
+.article-content blockquote {
+  font-style: italic;
+  color: #4a5568;
+  background-color: #f7fafc;
+  border-left: 4px solid #cbd5e0;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Images */
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+  display: block;
+}
+
+/* Links */
+.article-content a {
+  color: #3182ce;
+  text-decoration: underline;
+}
+
+.article-content a:hover {
+  color: #2b6cb0;
+}
+
+/* Code & Preformatted Text */
+.article-content code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  background-color: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  color: #d6336c;
+}
+
+.article-content pre {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f7fafc;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  overflow-x: auto;
+  color: #2d3748;
+}
+
+/* Horizontal Rule */
+.article-content hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 2rem 0;
+}
+
+/* Tables */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.article-content th,
+.article-content td {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.article-content th {
+  background-color: #edf2f7;
+  color: #2d3748;
+  font-weight: bold;
+}
+
+.article-content td {
+  color: #4a5568;
+}
+
+/* Inline elements */
+.article-content strong {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.article-content em {
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .article-content {
+    font-size: 0.95rem;
+  }
+
+  .article-content h1 {
+    font-size: 2rem;
+  }
+
+  .article-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .article-content h4 {
+    font-size: 1.25rem;
+  }
+
+  .article-content h5 {
+    font-size: 1.125rem;
+  }
+
+  .article-content h6 {
+    font-size: 1rem;
+  }
+
+  .article-content blockquote {
+    padding: 0.75rem;
+  }
+
+  .article-content pre {
+    padding: 0.75rem;
+  }
+
+  .article-content th,
+  .article-content td {
+    padding: 0.5rem;
+  }
+}
+
+/* Animation */
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.animate-progress {
+  animation: progressAnimation 2s ease-in-out infinite;
+}
