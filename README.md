@@ -1,8 +1,8 @@
-# **TechGather: Elevate Your Career, One Resource at a Time**
+# **DevCircle: Build. Connect. Grow — One Line of Code at a Time.**
 
 ## **Overview**
 
-TechGather is a platform designed to empower developers to achieve their career goals by providing access to curated articles, events, and networking opportunities. Whether you're looking to upskill, discover impactful events, or connect with like-minded professionals, TechGather helps you unlock your full potential.
+DevCircle is a platform designed to empower developers to achieve their career goals by providing access to curated articles, events, and networking opportunities. Whether you're looking to upskill, discover impactful events, or connect with like-minded professionals, DevCircle helps you unlock your full potential.
 
 **Mission**: To provide developers with the knowledge, opportunities, and connections they need to excel in their careers and make an impact in the tech industry.
 
@@ -29,12 +29,6 @@ TechGather is a platform designed to empower developers to achieve their career 
 4. **Network**: Connect with peers and professionals in the tech community.
 5. **Personalize Your Journey**: Let the platform recommend content and events based on your preferences.
 
-## **Demo**
-
-Please find recorded demos below
-
-1. [Demo - platform overview](https://www.loom.com/share/9e345ca374074a60b66897a76a4483bc?sid=40e98c73-91a6-4853-a2a8-863e761d61d5)
-
 ## **Installation**
 
 ### **Prerequisites**
@@ -47,8 +41,8 @@ Please find recorded demos below
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/nwanguma/techgather-frontend.git
-   cd techgather-frontend
+   git clone https://github.com/onyedikachidev-codes/devcircle-frontend.git
+   cd devcircle-frontend
    ```
 
 2. Install dependencies:
@@ -71,7 +65,7 @@ Please find recorded demos below
 
 5. The app should now be running at [http://localhost:3000](http://localhost:3000).
 
-6. The server lives in a different repo at [TechGather-api](https://github.com/nwanguma/techgather-api). Please follow instructions in the backend's readme to run the app end-to-end
+6. The server lives in a different repo. This repo is a private repo for now.
 
 ## **Contributing**
 
@@ -79,4 +73,4 @@ Contributions are not welcome yet! App is purely to demonstrate my working knowl
 
 ## **Contact**
 
-For any inquiries, please contact [nwangumat@gmail.com](mailto:nwangumat@gmail.com).
+For any inquiries, please contact [nwangumabimma@gmail.com](mailto:nwangumabimma@gmail.com).
