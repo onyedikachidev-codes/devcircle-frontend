@@ -45,7 +45,7 @@ const Home: React.FC<HomeProps> = ({ searchParams, params }) => {
                 />
               </div>
               <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mt-2 mb-8 md:mb-10 lg:mb-10 text-gray-800">
-                Join <span className="text-blue-700">TechGather</span> to{" "}
+                Join <span className="text-blue-700">DevCircle</span> to{" "}
                 <br></br>
                 level up your <span className="text-blue-700">career</span>{" "}
                 <br></br> get insights from{" "}
